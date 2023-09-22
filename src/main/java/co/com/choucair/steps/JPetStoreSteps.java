@@ -27,7 +27,7 @@ public class JPetStoreSteps {
         LOGGER.info("user open login page");
     }
 
-    @Step("clear user and password fields")
+    @Step("We are looking for the pet in the store")
     public void lookingForThePet() {
         jPetStorePage.petMenu.click();
         jPetStorePage.selectPet.click();
@@ -35,7 +35,7 @@ public class JPetStoreSteps {
         LOGGER.info("user successfully performed the action");
     }
 
-    @Step("validate successful login")
+    @Step("You should see the pets main page")
     public void successPetSearch() {
         assert petStorePageInteraction.getImage();
         assert petStorePageInteraction.getPrice();
