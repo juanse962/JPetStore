@@ -68,6 +68,8 @@ test {
 }
 
 serenity {
+    testRoot = "co.com.choucair.runner"
+    requirementsBaseDir = "src/test/resources/features"
     reports = ["single-page-html"]
 }
 

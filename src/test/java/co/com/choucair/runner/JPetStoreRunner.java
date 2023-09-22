@@ -8,9 +8,11 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         features = "src/test/resources/features/jpet_store.feature",
-        glue = "co.com.choucair.definitions",
+        glue = "definitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        plugin = "pretty"
+        plugin = "pretty",
+        tags = "@Pet"
+
 )
 public class JPetStoreRunner {
 }
