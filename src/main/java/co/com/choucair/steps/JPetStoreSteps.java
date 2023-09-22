@@ -35,7 +35,6 @@ public class JPetStoreSteps {
         LOGGER.info("user successfully performed the action");
     }
 
-
     @Step("validate successful login")
     public void successPetSearch() {
         assert petStorePageInteraction.getImage();

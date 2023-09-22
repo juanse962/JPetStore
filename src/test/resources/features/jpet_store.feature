@@ -1,7 +1,6 @@
 # author: Juan Gomez
 # date: 20/09/2023
 
-
 Feature: Pet Store
 
   I as a customer of the store
