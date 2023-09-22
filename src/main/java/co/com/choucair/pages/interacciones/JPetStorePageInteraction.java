@@ -10,7 +10,13 @@ public class JPetStorePageInteraction extends PageObject {
     private JPetStoreValidationPage jPetStoreValidationPage;
 
     public boolean getImage() {
-        return jPetStoreValidationPage.txtTitleMainPage.waitUntilVisible().isPresent();
+        return jPetStoreValidationPage.petImage.waitUntilVisible().isPresent();
+    }
+    public boolean getPrice() {
+        return jPetStoreValidationPage.price.waitUntilVisible().isPresent();
     }
 
+    public boolean getProductName() {
+        return jPetStoreValidationPage.productName.waitUntilVisible().isPresent();
+    }
 }

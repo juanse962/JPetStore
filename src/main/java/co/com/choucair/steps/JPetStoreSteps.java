@@ -39,6 +39,8 @@ public class JPetStoreSteps {
     @Step("validate successful login")
     public void successPetSearch() {
         assert petStorePageInteraction.getImage();
+        assert petStorePageInteraction.getPrice();
+        assert petStorePageInteraction.getProductName();
         LOGGER.info("the user validation is ok");
     }
 }
