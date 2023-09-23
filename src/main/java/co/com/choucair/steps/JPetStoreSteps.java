@@ -1,8 +1,7 @@
 package co.com.choucair.steps;
 
-import co.com.choucair.pages.interacciones.JPetStorePageInteraction;
-import co.com.choucair.pages.mapeos.JPetStorePage;
-import co.com.choucair.pages.mapeos.JPetStoreValidationPage;
+import co.com.choucair.pages.JPetStorePage;
+import co.com.choucair.pages.JPetStoreValidationPage;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 import org.slf4j.Logger;
@@ -18,8 +17,7 @@ public class JPetStoreSteps {
     @Page
     private JPetStoreValidationPage jPetStoreValidationPage;
 
-    @Page
-    private JPetStorePageInteraction petStorePageInteraction;
+
 
     @Step("user open login page")
     public void openPetStorePage() {
@@ -37,9 +35,9 @@ public class JPetStoreSteps {
 
     @Step("You should see the pets main page")
     public void successPetSearch() {
-        assert petStorePageInteraction.getImage();
-        assert petStorePageInteraction.getPrice();
-        assert petStorePageInteraction.getProductName();
+        assert jPetStoreValidationPage.petImage.waitUntilVisible().isPresent();
+        assert jPetStoreValidationPage.price.waitUntilVisible().isPresent();
+        assert jPetStoreValidationPage.productName.waitUntilVisible().isPresent();
         LOGGER.info("the user validation is ok");
     }
 }

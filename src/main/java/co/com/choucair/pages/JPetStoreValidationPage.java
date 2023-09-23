@@ -1,4 +1,4 @@
-package co.com.choucair.pages.mapeos;
+package co.com.choucair.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
